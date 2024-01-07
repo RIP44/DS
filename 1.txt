@@ -5,9 +5,14 @@ cars_multi <- read.csv("C:/Users/Keerthana/OneDrive/Desktop/Data Science Lab dat
 cars_price <- read.csv("C:/Users/Keerthana/OneDrive/Desktop/Data Science Lab datasets/Cars/cars_price.csv")
 
 head(cars_multi)
+dim(cars_multi)
+dim(cars_price)
 cars <- left_join(cars_multi, cars_price, by = "ID")
 colnames(cars)
 sum(!complete.cases(cars))
+summary(cars)
+str(cars)
+
 ggplot(cars, aes(mpg)) +
   geom_histogram(binwidth = 5) +
   labs(title = "Histogram of MPG", y = "Count") +
