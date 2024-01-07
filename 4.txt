@@ -24,8 +24,11 @@ knn.27 <- knn(train=train.loan, test=test.loan, cl=train.loan_labels, k=27)
 ACC.26 <- 100 * sum(test.loan_labels == knn.26)/NROW(test.loan_labels)
 ACC.27 <- 100 * sum(test.loan_labels == knn.27)/NROW(test.loan_labels)
 ACC.26
+ACC.27
 table(knn.26 ,test.loan_labels) 
 knn.26
+table(knn.27 ,test.loan_labels)
+knn.27
 library(caret)
 
 confusionMatrix(table(knn.26 ,test.loan_labels))
