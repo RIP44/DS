@@ -1,8 +1,5 @@
-library(dplyr) 
-library(ggplot2) 
-library(caret) 
-library(datarium) 
-loan <- read.csv("C:/Users/Keerthana/OneDrive/Desktop/Data Science Lab datasets/credit_data.csv")
+
+loan <- read.csv("credit_data.csv")
 str(loan)
 loan.subset <- loan[c('Creditability','Age..years','Sex.Marital.Status','Occupation','Account.Balance','Credit.Amount','Length.of.current.employment','Purpose')]
 str(loan.subset)
