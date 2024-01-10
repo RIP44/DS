@@ -5,6 +5,10 @@ library(datarium)
 data("marketing", package = "datarium") 
 
 head(marketing)
+dim(marketing)
+summary(marketing)
+str(marketing)
+sum(!complete.cases(marketing))
 
 ggplot(marketing, aes(sales)) +
   geom_histogram(binwidth = 5) +
